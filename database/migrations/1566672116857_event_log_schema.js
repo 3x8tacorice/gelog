@@ -1,5 +1,4 @@
 'use strict'
-const knex = use('knex')
 
 /** @type {import('@adonisjs/lucid/src/Schema')} */
 const Schema = use('Schema')
@@ -11,7 +10,8 @@ class EventLogSchema extends Schema {
       table.integer('event_id').unsigned()
       table.integer('user_id').unsigned()
       table.string('comment')
-      table.timestamps(true, true)
+      table.timestamp('createdAt').defaultTo(this.fn.now())
+      table.timestamp('updatedAt')
 
       // foreign key
       table.foreign('event_id').references('id').inTable('events')

@@ -10,7 +10,8 @@ class EventSchema extends Schema {
       table.string('name')
       table.string('description')
       table.string('default_comment')
-      table.timestamps(true, true)
+      table.timestamp('createdAt').defaultTo(this.fn.now())
+      table.timestamp('updatedAt')
     })
   }
 
