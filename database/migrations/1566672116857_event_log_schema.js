@@ -10,8 +10,8 @@ class EventLogSchema extends Schema {
       table.integer('event_id').unsigned()
       table.integer('user_id').unsigned()
       table.string('comment')
-      table.timestamp('createdAt').defaultTo(this.fn.now())
-      table.timestamp('updatedAt')
+      table.timestamp('created_at').defaultTo(this.fn.now())
+      table.timestamp('updated_at')
 
       // foreign key
       table.foreign('event_id').references('id').inTable('events')

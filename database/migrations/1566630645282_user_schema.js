@@ -8,8 +8,8 @@ class UserSchema extends Schema {
       table.increments()
       table.string('name')
       table.string('email')
-      table.timestamp('createdAt').defaultTo(this.fn.now())
-      table.timestamp('updatedAt')
+      table.timestamp('created_at').defaultTo(this.fn.now())
+      table.timestamp('updated_at')
     })
   }
 
