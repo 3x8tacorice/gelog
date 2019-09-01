@@ -1,6 +1,7 @@
 # Adonis API application
 
 This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+https://gelog-api.herokuapp.com
 
 1. Bodyparser
 2. Authentication
