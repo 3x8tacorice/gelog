@@ -67,7 +67,9 @@ class EventController {
     const ev = await Event
         .query()
         .with('logs')
-        .fetch()
+        .where('id', event_id)
+        .first()
+        // .fetch()
     return response.json(ev)
 
   }
