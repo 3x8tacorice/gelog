@@ -66,7 +66,7 @@ class EventController {
     const event_id = params.id
     const ev = await Event
         .query()
-        .with('logs')
+        .with('logs.user')
         .where('id', event_id)
         .first()
         // .fetch()

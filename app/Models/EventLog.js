@@ -8,6 +8,10 @@ class EventLog extends Model {
   event() {
     return this.belongsTo('App/Models/Event')
   }
+
+  user() {
+    return this.belongsTo('App/Models/User')
+  }
 }
 
 module.exports = EventLog
